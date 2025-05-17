@@ -11,8 +11,12 @@ export const theme = {
     gray900: '#101827',
 
     //green
+
     green: '#3AD291',
     lightgreen: '#BCF0DA',
+
+    black: '#000000',
+    white: '#FFFFFF',
   },
 
   font: {
