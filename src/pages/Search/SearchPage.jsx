@@ -2,11 +2,25 @@ import styled from '@emotion/styled';
 
 import StationList from '@pages/Search/components/StationList';
 import Input from '@pages/Search/components/Input';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { searchStation } from '../../shared/apis/searchStation';
 
 export default function SearchPage() {
+  const [stations, setStations] = useState([]);
   const [searchValue, setSearchValue] = useState('');
-  const stations = ['강남', '서울역', '홍대입구', '잠실', '잠실'];
+
+  useEffect(() => {
+    const fetchStations = async () => {
+      try {
+        const res = await searchStation(searchValue);
+        setStations(res.data.subways);
+      } catch (error) {
+        console.error('지하철역 검색 실패:', err);
+      }
+    };
+
+    if (searchValue.trim()) fetchStations();
+  }, [searchValue]);
 
   const filteredStations = stations.filter((station) => station.includes(searchValue));
   return (
