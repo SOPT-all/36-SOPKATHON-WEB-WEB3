@@ -1,17 +1,17 @@
 import styled from '@emotion/styled';
 
-const ReviewList = () => {
+const ReviewList = ({ reviewList }) => {
   return (
     <ReviewListParent>
-      {Array.from({ length: 5 }).map((_, idx) => (
-        <ReviewListWrapper key={idx}>
-          <ProfileWrapper />
+      {reviewList?.map((review, index) => (
+        <ReviewListWrapper key={index}>
+          <ProfileImg src={review.profileImageUrl} alt="리뷰" />
           <TextWrapper>
             <NameDateWrapper>
-              <Name>seoulworker1</Name>
-              <Date>2025.05.10</Date>
+              <Name>{review.author}</Name>
+              <Date>{review.date}</Date>
             </NameDateWrapper>
-            <ContentsWrapper>자연 속에서 좋은 경험이었어요. 사장님도 친절하셔서 또 오고 싶어요!</ContentsWrapper>
+            <ContentsWrapper>{review.content}</ContentsWrapper>
           </TextWrapper>
         </ReviewListWrapper>
       ))}
@@ -23,19 +23,19 @@ const ReviewListParent = styled.div`
   display: flex;
   flex-direction: column;
   margin-top: 12px;
-  gap: 4px;
+  gap: 1.5rem;
 `;
 
 const ReviewListWrapper = styled.div`
-  width: 100%;
-  height: 7.5rem;
+  width: auto;
+  min-height: 7.5rem;
   background-color: white;
   display: flex;
   gap: 1.5rem;
   margin: 0px 16px;
 `;
 
-const ProfileWrapper = styled.div`
+const ProfileImg = styled.img`
   width: 4rem;
   height: 4rem;
   background-color: ${({ theme }) => theme.colors.gray300};
@@ -60,7 +60,7 @@ const Date = styled.p`
 `;
 
 const ContentsWrapper = styled.div`
-  max-width: 27rem;
+  max-width: 33rem;
   ${({ theme }) => theme.font.pre_body_reg_14}
   color: ${({ theme }) => theme.colors.gray800};
   overflow-wrap: break-word;
