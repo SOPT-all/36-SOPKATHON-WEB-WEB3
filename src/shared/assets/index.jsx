@@ -1,4 +1,4 @@
-export { default as  } from './IconPlace';
+export { default as IconPlace } from './IconPlace';
 export { default as Profile } from './Profile';
 export { default as DropDown } from './DropDown';
 export { default as IconCalender } from './IconCalender';
