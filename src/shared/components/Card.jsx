@@ -1,10 +1,13 @@
 import { IconClock, Profile } from '@/shared/assets';
 import styled from '@emotion/styled';
 import { theme } from '@/shared/styles/theme';
+import { useNavigate } from 'react-router-dom';
 
-const Card = ({ name, duration, description, farmer, price, photoUrl, isCompleted = false }) => {
+const Card = ({ placeId, name, duration, description, farmer, price, photoUrl, isCompleted = false, onClick }) => {
+  const navigate = useNavigate();
+
   return (
-    <Wrapper>
+    <Wrapper onClick={() => navigate(`/detail/${placeId}`)}>
       <UpperContainer>
         <LeftContainer>
           <ProfileWrapper>
