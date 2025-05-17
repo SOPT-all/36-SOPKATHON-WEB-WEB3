@@ -1,0 +1,2 @@
+# 36-SOPKATHON-WEB-WEB3
+SOPT 36기 솝커톤 웹3조
