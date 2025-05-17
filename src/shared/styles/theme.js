@@ -11,9 +11,9 @@ export const theme = {
     gray900: '#101827',
 
     //green
-    green100: '#F8FAFB',
-    green200: '#F2F4F5',
-    green300: '#E5E7EA',
+
+    green: '#3AD291',
+    lightgreen: '#BCF0DA',
 
     black: '#000000',
     white: '#FFFFFF',
@@ -61,7 +61,6 @@ export const theme = {
       font-family: 'Pretendard';
       font-weight: 600;
       font-size: 1.4rem;
-      line-height: 140%;
     `,
 
     pre_body_med_14: css`
@@ -75,7 +74,6 @@ export const theme = {
       font-family: 'Pretendard';
       font-weight: 400;
       font-size: 1.4rem;
-      line-height: 140%;
     `,
 
     pre_body_semi_12: css`
