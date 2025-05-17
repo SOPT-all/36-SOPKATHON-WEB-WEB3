@@ -88,7 +88,8 @@
 
 <h2>스웹팟 Before and After</h2>
 <h3>Before</h3>
-![web](https://github.com/user-attachments/assets/2491f6c7-0cd6-45be-b887-01880991cf62)
+![image](https://github.com/user-attachments/assets/56a10905-c954-486b-86ff-8c56f395199e)
+
 
  
 <h3>After</h3>
