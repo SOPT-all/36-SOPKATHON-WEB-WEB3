@@ -1,5 +1,5 @@
 import * as React from 'react';
-const SvgIconClock = (props) => (
+const SvgIconClock2 = (props) => (
   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18" {...props}>
     <path
       fill="#4B5563"
@@ -7,4 +7,4 @@ const SvgIconClock = (props) => (
     />
   </svg>
 );
-export default SvgIconClock;
+export default SvgIconClock2;
