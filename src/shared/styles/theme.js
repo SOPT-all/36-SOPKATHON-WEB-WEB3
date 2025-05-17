@@ -19,11 +19,13 @@ export const theme = {
   font: {
     // Title
     pre_title_semi_20: css`
+      font-family: 'Pretendard';
       font-weight: 600;
       font-size: 2rem;
       line-height: 140%;
     `,
     pre_title_semi_18: css`
+      font-family: 'Pretendard';
       font-weight: 600;
       font-size: 1.8rem;
       line-height: 140%;
@@ -31,12 +33,14 @@ export const theme = {
 
     //Subtitle
     pre_subtitle_semi_18: css`
+      font-family: 'Pretendard';
       font-weight: 600;
       font-size: 1.8rem;
       line-height: 140%;
     `,
 
     pre_subtitle_semi_16: css`
+      font-family: 'Pretendard';
       font-weight: 600;
       font-size: 1.6rem;
       line-height: 140%;
@@ -44,36 +48,42 @@ export const theme = {
 
     //Body
     pre_body_med_16: css`
+      font-family: 'Pretendard';
       font-weight: 500;
       font-size: 1.6rem;
       line-height: 140%;
     `,
 
     pre_body_semi_14: css`
+      font-family: 'Pretendard';
       font-weight: 600;
       font-size: 1.4rem;
       line-height: 140%;
     `,
 
     pre_body_med_14: css`
+      font-family: 'Pretendard';
       font-weight: 500;
       font-size: 1.4rem;
       line-height: 140%;
     `,
 
     pre_body_reg_14: css`
+      font-family: 'Pretendard';
       font-weight: 400;
       font-size: 1.4rem;
       line-height: 140%;
     `,
 
     pre_body_semi_12: css`
+      font-family: 'Pretendard';
       font-weight: 600;
       font-size: 1.2rem;
       line-height: 140%;
     `,
 
     pre_body_reg_12: css`
+      font-family: 'Pretendard';
       font-weight: 400;
       font-size: 1.2rem;
       line-height: 140%;
@@ -81,12 +91,14 @@ export const theme = {
 
     //Caption
     pre_cap_semi_12: css`
+      font-family: 'Pretendard';
       font-weight: 600;
       font-size: 1.2rem;
       line-height: 140%;
     `,
 
     pre_cap_reg_12: css`
+      font-family: 'Pretendard';
       font-weight: 400;
       font-size: 1.2rem;
       line-height: 140%;
