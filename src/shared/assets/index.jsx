@@ -1,4 +1,4 @@
-export { default as  } from './IconPlace';
+export { default as IconPlace } from './IconPlace';
 export { default as Profile } from './Profile';
 export { default as DropDown } from './DropDown';
 export { default as IconCalender } from './IconCalender';
@@ -7,5 +7,6 @@ export { default as IconClock } from './IconClock';
 export { default as IconSubway } from './IconSubway';
 export { default as IconBack } from './IconBack';
 export { default as IconSearch } from './IconSearch';
+export { default as ImgTopBanner1 } from './ImgTopBanner1';
 export { default as LaborPrize } from './LaborPrize';
 export { default as LeftButton } from './LeftButton';

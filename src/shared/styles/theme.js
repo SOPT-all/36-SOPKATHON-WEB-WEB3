@@ -9,9 +9,8 @@ export const theme = {
     gray500: '#9CA2AE',
     gray800: '#4B5563',
     gray900: '#101827',
-
+    gradation: 'rgba(0, 0, 0, 0.50)',
     //green
-
     green: '#3AD291',
     lightgreen: '#BCF0DA',
 

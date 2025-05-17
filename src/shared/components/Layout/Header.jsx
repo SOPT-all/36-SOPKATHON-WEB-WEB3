@@ -14,7 +14,6 @@ const pathToTitle = {
 export default function Header() {
   const pathname = useLocation().pathname;
 
-  // 경로에 포함된 키워드 중 맵에 존재하는 첫 번째 키워드 찾기
   const matchedKey = Object.keys(pathToTitle).find((key) => pathname.includes(key));
 
   const title = matchedKey ? pathToTitle[matchedKey] : '';
