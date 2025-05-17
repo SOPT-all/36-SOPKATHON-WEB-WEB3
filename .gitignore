@@ -38,7 +38,3 @@ bower_components
 psd
 thumb
 sketch
-
-# Yarn
-.yarn
-.pnp.*
