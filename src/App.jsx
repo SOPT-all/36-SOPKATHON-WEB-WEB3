@@ -1,7 +1,7 @@
-import { QueryClientProvider } from "@tanstack/react-query";
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import pageRoutes from "@routes/pageRoutes";
-import { queryClient } from "@utils/query-client";
+import { QueryClientProvider } from '@tanstack/react-query';
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import pageRoutes from '@routes/pageRoutes';
+import { queryClient } from '@utils/query-client';
 const router = createBrowserRouter(pageRoutes);
 
 function App() {
@@ -12,4 +12,3 @@ function App() {
   );
 }
 export default App;
-

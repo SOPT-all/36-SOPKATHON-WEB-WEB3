@@ -26,7 +26,17 @@ module.exports = {
     'import/no-extraneous-dependencies': [
       'error',
       {
-        devDependencies: true,
+        devDependencies: [
+          '**/*.test.{js,jsx,ts,tsx}',
+          '**/*.spec.{js,jsx,ts,tsx}',
+          '**/vite.config.{js,ts}',
+          '**/eslint.config.{js,ts,cjs}',
+          '**/*.config.{js,ts,cjs}',
+          '**/setupTests.{js,ts}',
+          '**/scripts/**',
+        ],
+        optionalDependencies: false,
+        peerDependencies: false,
       },
     ],
     'import/no-unresolved': 'off',
