@@ -11,21 +11,26 @@ import { useParams } from 'react-router-dom';
 
 const FarmDetail = () => {
   const [data, setData] = useState(null);
-  const { placeId } = useParams();
+  const { id } = useParams();
 
   useEffect(() => {
     const fetchDetail = async () => {
       try {
-        const response = await apiClient.get(`/api/v1/places/${placeId}`);
+        const response = await apiClient.get(`/api/v1/places/${id}`);
         setData(response.data.data);
       } catch (error) {
         return error;
       }
     };
     fetchDetail();
-  }, [placeId]);
+  }, [id]);
 
-  if(!data) return( <LoadingWrapper><LoadingText>Loading...</LoadingText></LoadingWrapper>);
+  if (!data)
+    return (
+      <LoadingWrapper>
+        <LoadingText>Loading...</LoadingText>
+      </LoadingWrapper>
+    );
 
   return (
     <FarmDetailContainer>
@@ -81,5 +86,5 @@ const LoadingWrapper = styled.div`
 `;
 
 const LoadingText = styled.p`
-  ${({theme})=>theme.font.pre_title_semi_20}
+  ${({ theme }) => theme.font.pre_title_semi_20}
 `;

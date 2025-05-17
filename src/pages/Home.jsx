@@ -5,12 +5,18 @@ import FilterButton from '../shared/components/filter-button/FilterButton';
 import Card from '../shared/components/Card';
 import getHealingPlace from '../shared/apis/getHealingPlace';
 import ImgTopBanner1 from '../shared/assets/ImgTopBanner1';
+import { useNavigate } from 'react-router-dom';
 
 const filterOptions = ['전체', '과수원', '밭작물', '식물·꽃', '축산'];
 
 const Home = () => {
+  const navigate = useNavigate();
   const [places, setPlaces] = useState([]);
   const [selectedFilter, setSelectedFilter] = useState('전체');
+
+  const handleCardClick = (placeId) => {
+    navigate(`/detail/${placeId}`);
+  };
 
   useEffect(() => {
     const fetchPlaces = async () => {
@@ -31,7 +37,6 @@ const Home = () => {
 
   return (
     <Wrapper>
-      {/* <Header /> */}
       <ImgTopBanner1 />
       <Lower>
         <Text>추천 농장 알바</Text>
@@ -47,7 +52,7 @@ const Home = () => {
         </ButtonContainer>
         <CardContainer>
           {filteredPlaces && filteredPlaces.length > 0 ? (
-            filteredPlaces.map((place) => <Card key={place.placeId} {...place} />)
+            filteredPlaces.map((place) => <Card onClick={handleCardClick} key={place.placeId} {...place} />)
           ) : (
             <p></p>
           )}
