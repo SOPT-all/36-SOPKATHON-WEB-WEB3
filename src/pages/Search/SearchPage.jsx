@@ -26,15 +26,15 @@ export default function SearchPage() {
     queryFn: fetchSubwayList, // fetchSubwayList의 return데이터가 data로 들어감
   });
 
-  const stations = data?.subways ?? [];
-  
+  const fetchedStations = data?.subways ?? [];
+
   useEffect(() => {
     const fetchStations = async () => {
       try {
         const res = await searchStation(searchValue);
         setStations(res.data.subways);
       } catch (error) {
-        console.error('지하철역 검색 실패:', err);
+        console.error('지하철역 검색 실패:', error);
       }
     };
 
@@ -51,7 +51,7 @@ export default function SearchPage() {
       <Input value={searchValue} onChange={setSearchValue} />
       {!searchValue && (
         <StationWrapper>
-          {stations.map((station, idx) => {
+          {fetchedStations.map((station, idx) => {
             return <StationList key={idx} station={station} />;
           })}
         </StationWrapper>
