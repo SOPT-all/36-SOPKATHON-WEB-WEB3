@@ -34,6 +34,7 @@ module.exports = {
           '**/*.config.{js,ts,cjs}',
           '**/setupTests.{js,ts}',
           '**/scripts/**',
+          '**/vite.config.js',
         ],
         optionalDependencies: false,
         peerDependencies: false,
