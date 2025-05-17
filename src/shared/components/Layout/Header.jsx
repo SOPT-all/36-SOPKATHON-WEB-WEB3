@@ -2,6 +2,7 @@ import { useLocation, Link } from 'react-router-dom';
 import styled from '@emotion/styled';
 
 import IconBack from '@assets/IconBack';
+import IconPlace from '@assets/IconPlace';
 
 export default function Header() {
   const pathname = useLocation().pathname;
@@ -11,7 +12,17 @@ export default function Header() {
 
   return (
     <>
-      {!isHome && (
+      {isHome ? (
+        <HeaderAllWrapper>
+          <HomeHeaderWrapper>
+            <ImgWrapper>
+              <IconPlace />
+            </ImgWrapper>
+            <StationText>신촌역</StationText>
+            <ChangeBtn onClick={() => navigate(routePath.SEARCH)}>변경</ChangeBtn>
+          </HomeHeaderWrapper>
+        </HeaderAllWrapper>
+      ) : (
         <HeaderWrapper>
           <IconLink to="/">
             <IconBack />
@@ -40,4 +51,37 @@ const HeaderTitle = styled.p`
   left: 50%;
   transform: translateX(-50%);
   ${({ theme }) => theme.font.pre_title_semi_18}
+`;
+
+const HeaderAllWrapper = styled.div`
+  height: 6rem;
+`;
+
+const HomeHeaderWrapper = styled.div`
+  position: fixed;
+  width: 100%;
+  background-color: white;
+  border-bottom: 0.08rem solid ${({ theme }) => theme.colors.gray300};
+  padding: 0 0.8rem;
+  height: 6rem;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+`;
+
+const ImgWrapper = styled.div`
+  width: 1.7rem;
+  height: 2rem;
+  margin-left: 0.8rem;
+`;
+
+const StationText = styled.h1`
+  ${({ theme }) => theme.font.pre_subtitle_semi_16};
+  margin-top: 0.3rem;
+`;
+
+const ChangeBtn = styled.button`
+  border-radius: 0.8rem;
+  padding: 0.5rem 0.8rem;
+  margin-left: 0.5rem;
 `;
