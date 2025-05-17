@@ -1,8 +1,7 @@
 <div align="center">
 
 <h2> 아워팜 </h2>
-
-<img src=""  alt="서비스대표-이미지" />
+<img src="https://github.com/user-attachments/assets/fd9127e9-a76d-40d8-aaec-c7825fd55b46"  alt="서비스대표-이미지" />
 <p>경기도 농가와 일손 부족 문제, 도심 청년의 농촌형 단기 일자리 수요를 해결하는 단기 체험형 알바 서비스.<br/>
 **아워팜은 ‘hour’와 ‘our’의 의미를 함께 담은 네이밍입니다.**
 도심에서 1시간 내외로 도착할 수 있다는 점에서 ‘hour’를,‘그들의 경기도’에서 ‘우리의 경기도’로 지역의 경계를 확장한다는 점에서 ‘our’의 가치를 담고 있습니다.</p>
@@ -96,8 +95,6 @@
 <img src="https://github.com/user-attachments/assets/0c160e04-fb6a-4800-9709-4775bdda1646" alt="웨비 팀원들 사진 (before)"/>
 
 
- 
 <h3>After</h3>
-<img src="" alt="웨비 팀원들 사진 (after)"/>
-<img src="https://github.com/user-attachments/files/20268358/KakaoTalk_Photo_2025-05-18-08-16-09.jpeg" alt="웨비 팀원들 사진 (after)">
+<img src="https://github.com/user-attachments/assets/79124774-6ff6-4499-8c7a-73be1898c713" alt="웨비 팀원들 사진 (after)"/>
 
