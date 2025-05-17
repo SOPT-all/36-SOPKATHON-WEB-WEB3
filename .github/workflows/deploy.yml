@@ -1,8 +1,8 @@
-name: git push into another repo to deploy to vercel
+name: deploy
 
 on:
   push:
-    branches: [main]
+    branches: ['main']
 
 jobs:
   build:
