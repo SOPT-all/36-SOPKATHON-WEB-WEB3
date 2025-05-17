@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import React from 'react';
 import IconCalendar from '../../../shared/assets/IconCalender';
-import IconClock from '../../../shared/assets/IconClock';
+import IconClock from '../../../shared/assets/Icon-Clock';
 import IconSubway from '../../../shared/assets/IconSubway';
 
 const DetailBody = () => {
