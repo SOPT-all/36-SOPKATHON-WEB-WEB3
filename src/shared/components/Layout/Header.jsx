@@ -1,13 +1,21 @@
 import { useLocation, Link } from 'react-router-dom';
 import styled from '@emotion/styled';
-
 import IconBack from '@assets/IconBack';
+
+const pathToTitle = {
+  search: '출발지 선택',
+  detail: '상세 페이지',
+  mypage: '나의 신청 목록',
+};
 
 export default function Header() {
   const pathname = useLocation().pathname;
 
-  const isHome = !pathname.includes('search') && !pathname.includes('detail');
-  const title = pathname.includes('search') ? '출발지 선택' : '상세 페이지';
+  // 경로에 포함된 키워드 중 맵에 존재하는 첫 번째 키워드 찾기
+  const matchedKey = Object.keys(pathToTitle).find((key) => pathname.includes(key));
+
+  const title = matchedKey ? pathToTitle[matchedKey] : '';
+  const isHome = !matchedKey;
 
   return (
     <>
