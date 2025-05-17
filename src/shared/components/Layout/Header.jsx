@@ -32,7 +32,7 @@ export default function Header() {
             <StationTextWrapper onClick={() => navigate(routePath.SEARCH)}>
               <StationText>출발지를 선택해주세요</StationText>
               <ImgDropDouwnWrapper>
-                <IconDropDown/>
+                <IconDropDown />
               </ImgDropDouwnWrapper>
             </StationTextWrapper>
           </HomeHeaderWrapper>
@@ -97,7 +97,7 @@ const StationTextWrapper = styled.div`
 
 const StationText = styled.h1`
   ${({ theme }) => theme.font.pre_subtitle_semi_16};
-  color: ${({theme})=>theme.colors.gray800};
+  color: ${({ theme }) => theme.colors.gray800};
   margin-top: 0.4rem;
 `;
 
