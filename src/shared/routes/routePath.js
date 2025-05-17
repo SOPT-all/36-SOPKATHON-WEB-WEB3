@@ -1,6 +1,6 @@
 export default {
   HOME: '/',
-  DETAIL: '/detail',
+  DETAIL: '/detail/:id',
   SEARCH: '/search',
   MYPAGE: '/mypage',
 };

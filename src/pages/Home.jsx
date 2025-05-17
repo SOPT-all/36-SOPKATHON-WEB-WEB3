@@ -31,7 +31,7 @@ const Home = () => {
 
   return (
     <Wrapper>
-      <header></header>
+      {/* <Header /> */}
       <ImgTopBanner1 />
       <Lower>
         <Text>추천 농장 알바</Text>
