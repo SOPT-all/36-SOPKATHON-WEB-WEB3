@@ -2,12 +2,18 @@ import { css } from "@emotion/react";
 
 export const theme = {
   colors: {
+    //gray
     gray100: "#F8FAFB",
     gray200: "#F2F4F5",
     gray300: "#E5E7EA",
     gray500: "#9CA2AE",
     gray800: "#4B5563",
     gray900: "#101827",
+
+    //green
+    green100: '#F8FAFB',
+    green200: '#F2F4F5',
+    green300: '#E5E7EA',
   },
 
   font: {
