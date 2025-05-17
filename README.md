@@ -11,12 +11,14 @@
 <h2> ✨ (서비스) 주요 기능 </h2>
 
 <h3> 1️⃣ (기능 1) </h3>
-<img src=""  alt="기능1-대표이미지" />
+<img width="419" alt="image" src="https://github.com/user-attachments/assets/220e3b97-5831-4e35-b451-0b9cc5f0de2b" />
+
 <div ><strong>위치 기반</strong> 서울 지하철역을 출발점으로 설정하면, 1시간 30분 내 도달 가능한 경기도 명소를 추천합니다. <br/></div>
 
 
 <h3> 2️⃣ (기능 2) </h3>
-<img src=""  alt="기능1-대표이미지" />
+<img width="264" alt="page" src="https://github.com/user-attachments/assets/7d41c205-c7ba-41f0-9027-d8b083d0966e" />
+
 <div ><strong>소요 시간, 후기, 분위기</strong> 등 상세 정보를 제공해 방문 전 정확한 판단이 가능합니다. <br/></div>
 
 ## 팀원 및 역할 분담 👬
@@ -86,7 +88,9 @@
 
 <h2>스웹팟 Before and After</h2>
 <h3>Before</h3>
-<img src="" alt="웨비 팀원들 사진 (before)"/>
+![web](https://github.com/user-attachments/assets/87e65194-4f25-4ba9-b0ee-e5af883dff15)
+
+
  
 <h3>After</h3>
 <img src="" alt="웨비 팀원들 사진 (after)"/>
