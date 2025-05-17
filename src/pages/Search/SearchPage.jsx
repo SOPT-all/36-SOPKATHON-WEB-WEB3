@@ -2,16 +2,21 @@ import styled from '@emotion/styled';
 
 import StationList from '@pages/Search/components/StationList';
 import Input from '@pages/Search/components/Input';
+import { useState } from 'react';
 
 export default function SearchPage() {
-  const stations = ['강남', '서울역', '홍대입구', '잠실'];
+  const [searchValue, setSearchValue] = useState('');
+  const stations = ['강남', '서울역', '홍대입구', '잠실', '잠실'];
+
+  const filteredStations = stations.filter((station) => station.includes(searchValue));
   return (
     <PageWrapper>
-      <Input />
+      <Input value={searchValue} onChange={setSearchValue} />
       <StationWrapper>
-        {stations.map((station, idx) => {
-          return <StationList key={idx} station={station} />;
-        })}
+        {searchValue &&
+          filteredStations.map((station, idx) => {
+            return <StationList key={idx} station={station} />;
+          })}
       </StationWrapper>
     </PageWrapper>
   );

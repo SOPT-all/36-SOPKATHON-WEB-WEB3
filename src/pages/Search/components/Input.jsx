@@ -1,13 +1,17 @@
 import styled from '@emotion/styled';
 import IconSearch from '@assets/IconSearch';
 
-export default function Input() {
+import { useState } from 'react';
+
+export default function Input({ value, onChange }) {
+  const [station, setStation] = useState('');
+
   return (
     <InputWrapper>
       <IconWrapper>
         <IconSearch />
       </IconWrapper>
-      <InputContainer placeholder="지하철역 검색" />
+      <InputContainer placeholder="지하철역 검색" value={value} onChange={(e) => onChange(e.target.value)} />
     </InputWrapper>
   );
 }
@@ -26,6 +30,11 @@ const IconWrapper = styled.div`
 `;
 
 const InputContainer = styled.input`
+  width: 100%;
   background-color: transparent;
-  ${({ theme }) => theme.font.pre_body_med_14}
+  ${({ theme }) => theme.font.pre_body_med_14};
+  color: ${({ theme }) => theme.colors.gray800};
+  ::placeholder {
+    color: ${({ theme }) => theme.colors.gray500};
+  }
 `;
