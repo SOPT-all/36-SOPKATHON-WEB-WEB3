@@ -1,13 +1,10 @@
-import styled from "@emotion/styled"
-
 function App() {
   return (
-    <button>hi</button>
-  )
+    <div>
+      <h1>배포 테스트</h1>
+      <h2>배포 테스트</h2>
+    </div>
+  );
 }
 
-const Wrapper = styled.div`
-  background-color: ${(({theme})=>theme.colors.gray300)};
-`;
-
-export default App
+export default App;
