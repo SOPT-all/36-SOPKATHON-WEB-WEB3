@@ -1,10 +1,14 @@
+import { QueryClientProvider } from '@tanstack/react-query';
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import pageRoutes from '@routes/pageRoutes';
+import { queryClient } from '@utils/query-client';
+const router = createBrowserRouter(pageRoutes);
+
 function App() {
   return (
-    <div>
-      <h1>배포 테스트</h1>
-      <h2>배포 테스트</h2>
-    </div>
+    <QueryClientProvider client={queryClient}>
+      <RouterProvider router={router} />
+    </QueryClientProvider>
   );
 }
-
 export default App;
