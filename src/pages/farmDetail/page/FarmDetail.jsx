@@ -1,5 +1,4 @@
 import React from 'react';
-import DetailHeader from '../components/DetailHeader';
 import styled from '@emotion/styled';
 import DetailBody from '../components/DetailBody';
 import DetailButton from '../components/DetailButton';
@@ -11,7 +10,6 @@ import ReviewList from '../components/ReviewList';
 const FarmDetail = () => {
   return (
     <FarmDetailContainer>
-      <DetailHeader />
       <BlankComponent />
       <DetailBody />
       <DetailButton />
