@@ -1,13 +1,11 @@
 import { css, Global } from '@emotion/react';
 import reset from 'emotion-reset';
-import './font.css';
 
 const globalStyle = css`
   ${reset}
 
   * {
     box-sizing: border-box;
-    font-family: 'Pretendard Variable', Pretendard, sans-serif;
   }
 
   #root {
