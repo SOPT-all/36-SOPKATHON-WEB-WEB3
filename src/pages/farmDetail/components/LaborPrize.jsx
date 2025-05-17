@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 import React from 'react';
 import LaborPrizeImg from '../../../shared/assets/LaborPrize';
 
-const LaborPrize = () => {
+const LaborPrize = ({ price }) => {
   return (
     <LaborPrizeBoxContainer>
       <LaborPrizeBox>
@@ -10,7 +10,7 @@ const LaborPrize = () => {
           <StyledLaborPrize />
           <StyledBoxText>일손 보상</StyledBoxText>
         </StyledBoxTextWrapper>
-        <StyledPrize>₩50,000/일</StyledPrize>
+        <StyledPrize>₩{price}/일</StyledPrize>
       </LaborPrizeBox>
     </LaborPrizeBoxContainer>
   );

@@ -4,25 +4,24 @@ import IconCalendar from '../../../shared/assets/IconCalender';
 import IconClock from '../../../shared/assets/IconClock2';
 import IconSubway from '../../../shared/assets/IconSubway';
 
-const DetailBody = () => {
+const DetailBody = ({ data }) => {
   return (
     <DetailBodyWrapper>
-      <Title>봄철 블루베리 농장 일손 모집</Title>
-      <Location>경기도 남양주시 블루베리 농장</Location>
-
+      <Title>{data.name}</Title>
+      <Location>{data.address}</Location>
       <TimeContainer>
         <TimeWrapper>
           <StyledTimeBox>
             <StyledIconCalendar />
-            <StyledTime>모집 일자: 5월 둘째 주</StyledTime>
+            <StyledTime>모집 일자: {data.recruitDate}</StyledTime>
           </StyledTimeBox>
           <StyledTimeBox>
             <StyledIconClock />
-            <StyledTime>08:00 - 15:00</StyledTime>
+            <StyledTime>{data.startedAt} - {data.endAt}</StyledTime>
           </StyledTimeBox>
           <StyledTimeBox>
             <StyledIconSubway />
-            <StyledTime>예상 이동 시간: 50분</StyledTime>
+            <StyledTime>예상 이동 시간: {data.duration}분</StyledTime>
           </StyledTimeBox>
         </TimeWrapper>
 

@@ -1,14 +1,11 @@
 import styled from '@emotion/styled';
 import React from 'react';
 
-const DetailContent = () => {
+const DetailContent = ({ description }) => {
   return (
     <ContentWrapper>
       <ContentTitle>상세 내용</ContentTitle>
-      <DetailedContents>
-        블루베리 수확 및 정리, 단순 농장 업무를 도와주실 분을 모집합니다. 간단한 점심 제공, 편한 복장 권장. 서울역 기준
-        1시간 이내 대중교통 이동 가능합니다.
-      </DetailedContents>
+      <DetailedContents>{description}</DetailedContents>
     </ContentWrapper>
   );
 };
