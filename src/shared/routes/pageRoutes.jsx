@@ -1,5 +1,5 @@
-import Home from "@pages/Home";
-import routePath from "@routes/routePath";
+import Home from '@pages/Home';
+import routePath from '@routes/routePath';
 
 const pageRoutes = [
   {
