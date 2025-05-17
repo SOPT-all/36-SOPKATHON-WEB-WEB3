@@ -1,33 +1,43 @@
 import { IconClock, Profile } from '@/shared/assets';
-import React from 'react';
 import styled from '@emotion/styled';
 import { theme } from '@/shared/styles/theme';
 
-const Card = () => {
+const Card = ({ name, duration, description, farmer, price, photoUrl, isCompleted = false }) => {
   return (
     <Wrapper>
       <UpperContainer>
         <LeftContainer>
-          <Profile width={36} height={36} />
+          <ProfileWrapper>
+            <Profile width={36} height={36} />
+          </ProfileWrapper>
           <Info>
-            <Name>홍길동 농장주</Name>
-            <Location>과수원</Location>
+            <Name>{farmer}</Name>
+            <Location>{name}</Location>
           </Info>
         </LeftContainer>
         <RightContainer>
           <IconClock width={18} height={18} />
-          <Time>48분</Time>
+          <Time>{duration}</Time>
         </RightContainer>
       </UpperContainer>
-      <ImgContainer></ImgContainer>
+
+      <ImgContainer>
+        <Image src={photoUrl} alt={name} />
+      </ImgContainer>
+
       <LowerContainer>
         <SecondUppercontainer>
-          <Job>가평 사과 과수원</Job>
-          <Price>₩50,000/일</Price>
+          <Job>{name}</Job>
+          <Price>{`₩${price.toLocaleString()}/일`}</Price>
         </SecondUppercontainer>
-
-        <Detail>싱그러운 사과밭에서 수확을 도와주세요!</Detail>
+        <Detail>{description}</Detail>
       </LowerContainer>
+
+      {isCompleted && (
+        <BlockWrapper>
+          <BlockText>보상 지급 중</BlockText>
+        </BlockWrapper>
+      )}
     </Wrapper>
   );
 };
@@ -52,6 +62,14 @@ const LeftContainer = styled.div`
   display: flex;
   gap: 0.6rem;
 `;
+
+const ProfileWrapper = styled.div`
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  overflow: hidden;
+`;
+
 const Info = styled.div`
   display: flex;
   flex-direction: column;
@@ -88,8 +106,14 @@ const RightContainer = styled.div`
 `;
 
 const ImgContainer = styled.div`
-  height: 15.5rem;
   background-color: ${theme.colors.gray300};
+  border-radius: 8px;
+`;
+
+const Image = styled.img`
+  width: 100%;
+  height: 15.5rem;
+  object-fit: cover;
   border-radius: 8px;
 `;
 
@@ -101,4 +125,20 @@ const LowerContainer = styled.div`
 const SecondUppercontainer = styled.div`
   display: flex;
   justify-content: space-between;
+`;
+
+const BlockWrapper = styled.div`
+  position: absolute;
+  inset: 0;
+  background-color: ${theme.colors.gradation};
+`;
+
+const BlockText = styled.p`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  ${theme.font.pre_subtitle_semi_18};
+  color: ${theme.colors.white};
 `;
