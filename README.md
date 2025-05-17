@@ -88,7 +88,7 @@
 
 <h2>스웹팟 Before and After</h2>
 <h3>Before</h3>
-![image](https://github.com/user-attachments/assets/56a10905-c954-486b-86ff-8c56f395199e)
+<img src="https://github.com/user-attachments/assets/0c160e04-fb6a-4800-9709-4775bdda1646" alt="웨비 팀원들 사진 (before)"/>
 
 
  
