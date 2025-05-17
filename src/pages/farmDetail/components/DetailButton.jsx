@@ -1,10 +1,13 @@
 import styled from '@emotion/styled';
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const DetailButton = () => {
+
+  const navigate = useNavigate();
   return (
     <StyledButtonWrapper>
-      <StyledButton type="button">신청하기</StyledButton>
+      <StyledButton type="button" onClick={() => navigate('/mypage')}>신청하기</StyledButton>
     </StyledButtonWrapper>
   );
 };
