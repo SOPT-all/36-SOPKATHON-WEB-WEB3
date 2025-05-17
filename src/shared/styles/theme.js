@@ -14,6 +14,9 @@ export const theme = {
     green100: '#F8FAFB',
     green200: '#F2F4F5',
     green300: '#E5E7EA',
+
+    black: '#000000',
+    white: '#FFFFFF',
   },
 
   font: {
