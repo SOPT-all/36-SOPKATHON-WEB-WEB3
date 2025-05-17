@@ -4,40 +4,44 @@ import './font.css';
 
 const globalStyle = css`
   ${reset}
+
   * {
     box-sizing: border-box;
     font-family: 'Pretendard Variable', Pretendard, sans-serif;
   }
 
-  html {
+  #root {
     width: 100%;
-    height: 100%;
+    min-width: 375px;
+    max-width: 430px;
+    min-height: 100dvh;
+    background-color: #fff;
+    margin: 0 auto;
+  }
+
+  @media (min-width: 430px) {
+    #root {
+      max-width: var(—max-width);
+      box-shadow: 0 0 2px rgba(0, 0, 0, 0.4);
+    }
+  }
+
+  html,
+  body {
+    width: 100%;
     margin: 0;
     padding: 0;
-  }
 
-  body {
-    overflow-x: hidden;
-  }
-
-  body {
-    -ms-overflow-style: none;
-  }
-
-  ::-webkit-scrollbar {
-    display: none;
+    font-size: 62.5%;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
   }
 
   button {
     margin: 0;
     padding: 0;
     border: none;
-    background-color: transparent;
     cursor: pointer;
-
-    &:disabled {
-      cursor: not-allowed;
-    }
   }
 
   input {
@@ -48,17 +52,18 @@ const globalStyle = css`
   }
 
   a {
-    color: #fff;
     text-decoration: none;
-    outline: none;
   }
 
-  a:hover,
-  a:active {
-    text-decoration: none;
+  select {
+    background: #fff;
+  }
+
+  /* Chrome, Safari 등에서 스크롤바 숨김 처리 */
+  ::-webkit-scrollbar {
+    display: none;
   }
 `;
-
 const GlobalStyle = () => <Global styles={globalStyle} />;
 
 export default GlobalStyle;
