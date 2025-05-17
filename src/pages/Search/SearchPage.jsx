@@ -14,9 +14,6 @@ export default function SearchPage() {
   const fetchSubwayList = async () => {
     const response = await apiClient.get('/api/v1/subways');
 
-    if (response.status !== 200) {
-      throw new Error('서버 연결 실패');
-    }
     console.log(response.data.data);
     return response.data.data;
   };
